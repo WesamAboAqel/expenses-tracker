@@ -24,7 +24,7 @@ This project is built as part of the roadmap.sh challenge:
 ## Installation
 
 ```
-git clone <your-repo-url>
+git clone (https://github.com/WesamAboAqel/expenses-tracker)
 cd expense-tracker
 npm link
 ```
