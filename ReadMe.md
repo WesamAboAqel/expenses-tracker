@@ -24,7 +24,7 @@ This project is built as part of the roadmap.sh challenge:
 ## Installation
 
 ```
-git clone <your-repo-url>
+git clone https://github.com/WesamAboAqel/expense-tracker
 cd expense-tracker
 npm link
 ```
@@ -42,7 +42,7 @@ expense-tracker <command>
 ### 1. Add an expense
 
 ```
-expense-tracker add --description "Lunch" --amount 20 --date 2025-01-02
+expense-tracker add --description "Lunch" --amount 20 --date 6-15-2025
 ```
 
 If the date is not provided, **today's date** is used.
@@ -119,24 +119,24 @@ Output example:
 
 ## Flags
 
-| Flag            | Meaning                        | Required                     |
-| --------------- | ------------------------------ | ---------------------------- |
-| `--description` | Description of the expense     | Yes (add)                    |
-| `--amount`      | Amount spent (must be > 0)     | Yes (add)                    |
-| `--date`        | Date of expense (YYYY-MM-DD)   | Optional                     |
-| `--id`          | Expense ID (for update/delete) | Yes (update/delete)          |
-| `--month`       | Month number (1–12)            | Required for monthly summary |
+| Flag            | Meaning                        | Required                               |
+| --------------- | ------------------------------ | ----------------------------           |
+| `--description` | Description of the expense     | Yes (add) Defaults to "Some Expense"   |
+| `--amount`      | Amount spent (must be > 0)     | Yes (add) Defaults to 10$              |
+| `--date`        | Date of expense (MM-DD-YYYY)   | Optional                               |
+| `--id`          | Expense ID (for update/delete) | Yes (update/delete)                    |
+| `--month`       | Month number (1–12)            | Required for monthly summary           |
 
 ---
 
 ## File Structure
 
 ```
-.
+expense-tracker
 ├── app.js              # CLI entry point
 ├── functions.js        # Main logic for commands
 ├── expenses.json       # Local storage
-└── README.md
+└── README.md           # Documentation
 ```
 
 ---
@@ -159,7 +159,7 @@ Output example:
 
 * Only the fields: **description**, **amount**, **date** are user-editable
 * Amounts are validated and converted to integers
-* Dates are formatted as: `day-Month-Year`
+* Dates are formatted as: `Month-Day-Year`
 
 ---
 
@@ -180,6 +180,4 @@ expense-tracker summary --month 1
 
 MIT License
 
----
 
-If you want, I can also write a short LinkedIn-optimized announcement post for this project.
